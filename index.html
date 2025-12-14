@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vánoční sportovní kalendář</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #b3000c; /* Vánoční tmavě červená */
+            background-image: linear-gradient(135deg, #b3000c 0%, #800000 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 4px solid #d4af37; /* Zlatý rámeček */
+        }
+
+        h1 {
+            text-align: center;
+            color: #b3000c;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* Styl pro jednotlivé dny (Accordion) */
+        details {
+            background-color: #fff;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: #27ae60; /* Zelená po otevření */
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
+        }
+
+        summary {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; /* Skryje výchozí šipku */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #b3000c;
+            font-size: 1.1rem;
+        }
+
+        summary:hover {
+            background-color: #fff0f0;
+        }
+
+        /* Vlastní ikonka plus/mínus */
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+            color: #27ae60;
+        }
+
+        /* Obsah úkolu */
+        .content {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎄 Vánoční výzva 🎄</h1>
+        <p class="subtitle">Otevři každý den jeden úkol!</p>
+
+        <details>
+            <summary>
+                <span><span class="icon">🦌</span> Den 1: Sobí slalom</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Najdi řadu stromů nebo si představ kužely. Tvým úkolem je co nejrychleji prokličkovat mezi 5 překážkami tam a zpět.<br><br>
+                <em>Pozor, ať ti nespadnou parohy!</em>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🎒</span> Den 2: Santův pytel</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Dej si na záda batoh (nebo popros rodiče o "závaží") a udělej 10 poctivých dřepů.<br><br>
+                <em>Pytel se nesmí dotknout země!</em>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🎯</span> Den 3: Trefa do komína</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Vezmi šišku nebo sněhovou kouli. Najdi cíl vzdálený 5 kroků a zkus se trefit. Máš 3 pokusy.<br><br>
+                <em>Trefil ses? Dárky jsou doručeny!</em>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🏃</span> Den 4: Útěk před Grinchem</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Grinch se blíží! Odstartuj a sprintuj k tamtomu stromu (cca 20 metrů) a rychle zase zpátky do bezpečí.
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🔥</span> Den 5: Skok přes krb</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Udělej pořádný skok z místa (snožmo), abys přeskočil oheň v krbu. Změř, kolik stop jsi skočil!
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">❄️</span> Den 6: Zmrzlá socha</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Zastav se a udělej "stromeček" (stůj na jedné noze, ruce nad hlavou). Vydrž takto stát a ani se nehnout 10 sekund.
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">⛄</span> Den 7: Vločka na zemi</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Jsi sněhová vločka. Udělej 5 "angličáků" (lehni si břichem na zem, zvedni se a vyskoč s tlesknutím nad hlavou).
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🥄</span> Den 8: Ozdoba na lžíci</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Přenést na lžíci (nebo na klacíku) šišku po trase 10 kroků tam a zpět. Pokud spadne, začínáš znovu!
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">💪</span> Den 9: Louskáček</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Jsi silný jako Louskáček. Udělej 10 kliků (na zemi nebo s oporou o lavičku/pařez).
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <span><span class="icon">🌟</span> Den 10: Cesta do Betléma</span>
+            </summary>
+            <div class="content">
+                <strong>Úkol:</strong> Přejdi po úzké čáře (nebo kládě) stylem "pata na špičku". Udrž rovnováhu a nespadni do závěje!
+            </div>
+        </details>
+
+    </div>
+
+    <div class="footer">
+        Sportujeme i o Vánocích!
+    </div>
+
+</body>
+</html>
